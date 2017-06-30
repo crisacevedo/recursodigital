@@ -1,0 +1,507 @@
+  
+<div class="wrapper">
+	<div class="sidebar" data-background-color="white" data-active-color="danger">
+
+    <!--
+		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+	-->
+
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="#/app" class="simple-text">
+                    Nombre Sitio
+                </a>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="#/app">
+                        <i class="ti-home"></i>
+                        <p>Inicio</p>
+                    </a>
+                </li>
+				<li>
+                    <a class="accordion">
+                        <i class="ti-align-left"></i>
+                        <p>Tutoriales <b class="caret"></b></p>
+                    </a>
+					<div class="panel">
+						<ul class="nav">
+							<a class="accordion">
+								<p>Lógica y Conjuntos Difusos <b class="caret"></b></p>
+							</a>
+							<div class="panel">
+								<ul class="nav">
+									<li><a href="#/logica">Lógica Difusa</a></li>
+									<li><a href="#/conjuntos">Conjuntos Difusos</a></li>
+									<li><a href="#">Contenido 3</a></li>
+								</ul>
+							</div>
+							<a class="accordion">
+								<p>Modelos Relacionales Difusos <b class="caret"></b></p>
+							</a>
+							<div class="panel">
+								<ul class="nav">
+									<li><a href="#/modelos">Introducción</a></li>
+									<li><a href="#/unificado">Modelo Unificado</a></li>
+									<li><a href="#">Contenido 3</a></li>
+								</ul>
+							</div>
+							<a class="accordion">
+								<p>Modelo Fuzzy EER <b class="caret"></b></p>
+							</a>
+							<div class="panel">
+								<ul class="nav">
+									<li><a href="#/eer">Introducción</a></li>
+									<li><a href="#">Contenido 2</a></li>
+									<li><a href="#">Contenido 3</a></li>
+								</ul>
+							</div>
+						</ul>
+					</div>
+                </li>
+				<li class="active">
+                    <a class="accordion">
+						<i class="ti-vector"></i>
+						<p>Simuladores <b class="caret"></b></p>
+					</a>
+					<div class="panel">
+						<ul class="nav">
+							<li><a href="#/simulador">Modelo Unificado</a></li>
+							<li class="active"><a href="#/simulador2">Modelo Fuzzy EER</a></li>
+						</ul>
+					</div>
+				</li>
+            </ul>
+    	</div>
+    </div>
+	
+    <div class="main-panel">
+		<nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Navegación</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="ti-settings"></i>
+									<p>Herramientas</p>
+									<b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Administración</a></li>
+                                <li><a href="#">Reportes</a></li>
+                              </ul>
+                        </li>
+						<li>
+                            <a ng-click="logout()" href="#">
+                                <i class="ti-panel"></i>
+								<p>Salir</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+		<div style="margin-left:2%; text-align: justify; width:600px;">
+			<center>   <h2>Simulador FUZZY EER</h2> </center>
+			<img hidden src="IMG/circulo.png" id="my-image-3">
+			<div id ="target"> 
+				<center><p> Modelo Fuzzy EER cancion 1 </p> </center>
+					<canvas id="canvas" width="800" height="450" style="border:1px solid #000000">
+					
+					</canvas>
+
+				<table>
+				<thead><tr><th>rock_reg</th><th>rock_pop</th><th>rock_ska</th><th>rock_jazz</th><th>reg_pop</th><th>reg_ska</th><th>reg_jazz</th><th>pop_ska</th><th>pop_jazz</th><th>ska_jazz</th></tr></thead>
+
+				<p>
+					<center> <button ng-click="tablarelaciones(1)"> Cancion 1 atributo de categoria 3 </button></center>
+				</p>
+				
+				<tbody>
+				  <tr >
+					<td>{{ rockcero[0] }}</td>
+					<td>{{ rockcero[1] }}</td>
+					<td>{{ rockcero[2] }}</td>
+					<td>{{  rockcero[3]  }}</td>
+					<td>{{ rockcero[4] }}</td>
+					<td>{{ rockcero[5] }}</td>
+					<td>{{  rockcero[6]  }}</td>
+					<td>{{  rockcero[7]  }}</td>
+					<td>{{  rockcero[8] }}</td>
+					<td>{{  rockcero[9] }}</td></tr>
+				</tbody>
+				</tfoot></tfoot>
+				</table>
+			</div>
+			<center><p> Modelo Fuzzy EER cancion 2 </p> </center>
+			<canvas id="canvas2" width="800" height="450" style="border:1px solid #000000">
+			
+			</canvas>
+			<div id ="target2"> 
+				<table>
+				<thead><tr><th>rock_reg</th><th>rock_pop</th><th>rock_ska</th><th>rock_jazz</th><th>reg_pop</th><th>reg_ska</th><th>reg_jazz</th><th>pop_ska</th><th>pop_jazz</th><th>ska_jazz</th></tr></thead>
+
+				<p>
+					<center><button ng-click="tablarelaciones(2)"> Cancion 2 atributo de categoria 3 </button></center>
+				</p>
+
+				<tbody>
+					<td>{{ rock[0] }}</td>
+					<td>{{ rock[1] }}</td>
+					<td>{{ rock[2] }}</td>
+					<td>{{  rock[3]  }}</td>
+					<td>{{ rock[4] }}</td>
+					<td>{{ rock[5] }}</td>
+					<td>{{  rock[6]  }}</td>
+					<td>{{  rock[7]  }}</td>
+					<td>{{  rock[8] }}</td>
+					<td>{{  rock[9] }}</td>
+				   </tr>
+				</tbody>
+				</tfoot></tfoot>
+				</table>
+			</div>
+		</div>
+    </div>
+</div>
+
+<script>
+	// Append all the named children to the form and then submit it
+	// Assumes the class of any input used by the form is the same as the form id
+	function submitMyForm( form_id )
+	{
+		var form = document.getElementById( form_id );
+		var form_elements = document.getElementsByClassName( form_id );
+		var i;
+		for (i = 0; i < form_elements.length; i++) {
+			form.appendChild( form_elements[i] );                   
+		}
+		form.submit();
+	}   
+</script>
+
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].onclick = function(){
+		this.classList.toggle("active");
+		this.nextElementSibling.classList.toggle("show");
+	}
+}
+</script>
+
+<script>
+
+$(document).ready(function(){
+    $(".copyMe").keyup(function(){
+        $(".copyMe").val($(this).val());
+    });
+});
+
+$(document).ready(function(){
+    $(".copyMeuno").keyup(function(){
+        $(".copyMeuno").val($(this).val());
+    });
+});
+
+$(document).ready(function(){
+    $(".copyMeunodos").keyup(function(){
+        $(".copyMeunodos").val($(this).val());
+    });
+});
+
+$(document).ready(function(){
+    $(".copyMedos").keyup(function(){
+        $(".copyMedos").val($(this).val());
+    });
+});
+
+$(document).ready(function(){
+    $(".copyMetres").keyup(function(){
+        $(".copyMetres").val($(this).val());
+    });
+});
+
+$(document).ready(function(){
+    $(".copyMecuatro").keyup(function(){
+        $(".copyMecuatro").val($(this).val());
+    });
+});
+
+$(document).ready(function(){
+    $(".copyMecinco").keyup(function(){
+        $(".copyMecinco").val($(this).val());
+    });
+});
+
+$(document).ready(function(){
+    $(".copyMeseis").keyup(function(){
+        $(".copyMeseis").val($(this).val());
+    });
+});
+
+$(document).ready(function(){
+    $(".copyMesiete").keyup(function(){
+        $(".copyMesiete").val($(this).val());
+    });
+});
+
+$(document).ready(function(){
+    $(".copyMeocho").keyup(function(){
+        $(".copyMeocho").val($(this).val());
+    });
+});
+
+$(document).ready(function(){
+    $(".copyMenueve").keyup(function(){
+        $(".copyMenueve").val($(this).val());
+    });
+});
+
+$(document).ready(function(){
+    $(".copyMediez").keyup(function(){
+        $(".copyMediez").val($(this).val());
+    });
+});
+
+ </script>
+
+
+<script>  
+
+var canvas = new fabric.Canvas('canvas') 
+
+canvas.add (new fabric.Circle({
+  radius: 20, fill: 'black', stroke:'black', left: 500, top: 100
+}));
+
+canvas.add (new fabric.Circle({
+  radius: 20,  fill: 'white', stroke:'black', left: 500, top: 175
+}));
+    
+var imgElement = document.getElementById('my-image-3');
+    canvas.add(new fabric.Image(imgElement, {
+		left: 490,
+		top: 246.5,
+		angle: 0,
+		opacity: 1,
+		width: 60,
+		height: 45
+    }));
+
+canvas.add (new fabric.Circle({
+        radius: 20, fill: 'white', stroke:'black', left: 500, top: 325,stroke: '#333', strokeWidth: 3,strokeDashArray: [5, 10]
+	}));
+
+canvas.add(new fabric.Rect({
+		left: 100,
+		top: 100,
+		fill: 'white', stroke:'black' ,width:200,
+		height: 100
+	}));
+
+canvas.add(new fabric.Line([0,0,200,0], {
+        fill: 'black',
+        stroke: 'black',
+        strokeWidth: 2,
+        hasControls: true,
+        hasRotatingPoint: true,
+        padding: 10,
+        left: 300,
+        top: 120
+        //scaleX: 1,
+        //scaleY: 1
+    }));
+
+canvas.add(new fabric.Line([0,0,200,0], {
+        fill: 'black',
+        stroke: 'black',
+        strokeWidth: 2,
+        hasControls: true,
+        hasRotatingPoint: true,
+        padding: 10,
+        left: 300,
+        top: 200
+        //scaleX: 1,
+        //scaleY: 1
+    }));
+
+canvas.add(new fabric.Line([0,0,0,70], {
+        fill: 'black',
+        stroke: 'black',
+        strokeWidth: 2,
+        hasControls: true,
+        hasRotatingPoint: true,
+        padding: 10,
+        left: 250,
+        top: 200
+        //scaleX: 1,
+        //scaleY: 1
+    }));
+
+canvas.add(new fabric.Line([0,0,250 ,0], {
+        fill: 'black',
+        stroke: 'black',
+        strokeWidth: 2,
+        hasControls: true,
+        hasRotatingPoint: true,
+        padding: 10,
+        left: 250,
+        top: 270
+        //scaleX: 1,
+        //scaleY: 1
+    }));
+
+canvas.add(new fabric.Line([0,0,0,150], {
+        fill: 'black',
+        stroke: 'black',
+        strokeWidth: 2,
+        hasControls: true,
+        hasRotatingPoint: true,
+        padding: 10,
+        left: 200,
+        top: 200
+        //scaleX: 1,
+        //scaleY: 1
+    }));
+
+canvas.add(new fabric.Line([0,0,300,0], {
+        fill: 'black',
+        stroke: 'black',
+        strokeWidth: 2,
+        hasControls: true,
+        hasRotatingPoint: true,
+        padding: 10,
+        left: 200,
+        top: 350
+        //scaleX: 1,
+        //scaleY: 1
+    }));
+
+var canvas = new fabric.Canvas('canvas2') 
+
+canvas.add (new fabric.Circle({
+		radius: 20, fill: 'black', stroke:'black', left: 500, top: 100
+	}));
+
+canvas.add (new fabric.Circle({
+		radius: 20,  fill: 'white', stroke:'black', left: 500, top: 175
+	}));
+    
+var imgElement = document.getElementById('my-image-3');
+		canvas.add(new fabric.Image(imgElement, {
+		left: 490,
+		top: 246.5,
+		angle: 0,
+		opacity: 1,
+		width: 60,
+		height: 45
+    }));
+
+
+canvas.add (new fabric.Circle({
+               radius: 20, fill: 'white', stroke:'black', left: 500, top: 325,stroke: '#333',
+  strokeWidth: 3,strokeDashArray: [5, 10]
+}));
+
+canvas.add(new fabric.Rect({
+  left: 100,
+  top: 100,
+  fill: 'white', stroke:'black' ,width:200,
+  height: 100
+}));
+
+canvas.add(new fabric.Line([0,0,200,0], {
+        fill: 'black',
+        stroke: 'black',
+        strokeWidth: 2,
+        hasControls: true,
+        hasRotatingPoint: true,
+        padding: 10,
+        left: 300,
+        top: 120
+        //scaleX: 1,
+        //scaleY: 1
+    }));
+
+canvas.add(new fabric.Line([0,0,200,0], {
+        fill: 'black',
+        stroke: 'black',
+        strokeWidth: 2,
+        hasControls: true,
+        hasRotatingPoint: true,
+        padding: 10,
+        left: 300,
+        top: 200
+        //scaleX: 1,
+        //scaleY: 1
+    }));
+
+canvas.add(new fabric.Line([0,0,0,70], {
+        fill: 'black',
+        stroke: 'black',
+        strokeWidth: 2,
+        hasControls: true,
+        hasRotatingPoint: true,
+        padding: 10,
+        left: 250,
+        top: 200
+        //scaleX: 1,
+        //scaleY: 1
+    }));
+	
+canvas.add(new fabric.Line([0,0,250 ,0], {
+        fill: 'black',
+        stroke: 'black',
+        strokeWidth: 2,
+        hasControls: true,
+        hasRotatingPoint: true,
+        padding: 10,
+        left: 250,
+        top: 270
+        //scaleX: 1,
+        //scaleY: 1
+    }));
+
+canvas.add(new fabric.Line([0,0,0,150], {
+        fill: 'black',
+        stroke: 'black',
+        strokeWidth: 2,
+        hasControls: true,
+        hasRotatingPoint: true,
+        padding: 10,
+        left: 200,
+        top: 200
+        //scaleX: 1,
+        //scaleY: 1
+    }));
+
+canvas.add(new fabric.Line([0,0,300,0], {
+        fill: 'black',
+        stroke: 'black',
+        strokeWidth: 2,
+        hasControls: true,
+        hasRotatingPoint: true,
+        padding: 10,
+        left: 200,
+        top: 350
+        //scaleX: 1,
+        //scaleY: 1
+    }));
+
+</script>
+
+
+
