@@ -1,0 +1,143 @@
+
+<div class="wrapper">
+	<div class="sidebar" data-background-color="white" data-active-color="danger">
+
+    <!--
+		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+	-->
+
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="#/administrador" class="simple-text">
+                    Nombre Sitio
+                </a>
+            </div>
+            
+
+            		<div class="panel">
+					</div>
+				</li>
+            </ul>
+    	</div>
+    </div>
+	
+    <div class="main-panel">
+		<nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/administrador">Navegación</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="ti-settings"></i>
+									<p>Herramientas</p>
+									<b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Administración</a></li>
+                                <li><a href="#">Reportes</a></li>
+                              </ul>
+                        </li>
+						<li>
+                            <a ng-click="logout()" href="#">
+                                <i class="ti-panel"></i>
+								<p>Salir</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+		<div style="margin-left:2%">
+			<h2>Bienvenido</h2>
+		 
+
+    
+                <table>
+                <thead><tr><th>rock_reg</th><th>rock_pop</th><th>rock_ska</th><th>rock_jazz</th><th>reg_pop</th><th>reg_ska</th><th>reg_jazz</th><th>pop_ska</th><th>pop_jazz</th><th>ska_jazz</th></tr></thead>
+
+                <p>
+                    <center> <button ng-click="tablarelaciones(1)"> Promedio de todos los usuarios cancion 1 </button></center>
+                </p>
+                
+                <tbody>
+                  <tr >
+                    <td>{{ rockcero[0] }}</td>
+                    <td>{{ rockcero[1] }}</td>
+                    <td>{{ rockcero[2] }}</td>
+                    <td>{{  rockcero[3]  }}</td>
+                    <td>{{ rockcero[4] }}</td>
+                    <td>{{ rockcero[5] }}</td>
+                    <td>{{  rockcero[6]  }}</td>
+                    <td>{{  rockcero[7]  }}</td>
+                    <td>{{  rockcero[8] }}</td>
+                    <td>{{  rockcero[9] }}</td></tr>
+                </tbody>
+                </tfoot></tfoot>
+                </table>           
+    
+<table>
+                <thead><tr><th>rock_reg</th><th>rock_pop</th><th>rock_ska</th><th>rock_jazz</th><th>reg_pop</th><th>reg_ska</th><th>reg_jazz</th><th>pop_ska</th><th>pop_jazz</th><th>ska_jazz</th></tr></thead>
+
+                <p>
+                    <center><button ng-click="tablarelaciones(2)"> Promedio de todos los usuarios cancion 2 </button></center>
+                </p>
+
+                <tbody>
+                    <td>{{ rock[0] }}</td>
+                    <td>{{ rock[1] }}</td>
+                    <td>{{ rock[2] }}</td>
+                    <td>{{  rock[3]  }}</td>
+                    <td>{{ rock[4] }}</td>
+                    <td>{{ rock[5] }}</td>
+                    <td>{{  rock[6]  }}</td>
+                    <td>{{  rock[7]  }}</td>
+                    <td>{{  rock[8] }}</td>
+                    <td>{{  rock[9] }}</td>
+                   </tr>
+                </tbody>
+                </tfoot></tfoot>
+                </table>
+
+                <div id="chartContainer" style="height: 360px; width: 100%;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+    </div>
+</div>
+
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].onclick = function(){
+			this.classList.toggle("active");
+			this.nextElementSibling.classList.toggle("show");
+	  }
+	}
+
+
+    
+</script>
+

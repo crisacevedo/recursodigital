@@ -98,8 +98,28 @@ INSERT INTO `cancion` (`id`, `nombre`, `artista`, `ruta`) VALUES (NULL, 'cancion
 
 INSERT INTO `cancion` (`id`, `nombre`, `artista`, `ruta`) VALUES (NULL, 'cancion 2', 'Manu chao ', 'C:\\xampp\\htdocs\\Usach-tesis-\\audios\\Manu Chao - A Cosa (1).mp3.mp3');
 
-insert into prueba (rock_reg) select avg(rock_reg) from categoria where idc=2
+insert into reporte (rock_reg,idc,reg_pop) select avg(rock_reg),avg(reg_pop),idc from categoria where idc=2
+
+
 	
+create table reporte ( `idc` int(11) NOT NULL, `rock_reg` float NOT NULL, `rock_pop` float NOT NULL, `rock_ska` float NOT NULL, `rock_jazz` float NOT NULL, `reg_pop` float NOT NULL, `reg_ska` float NOT NULL, `reg_jazz` float NOT NULL, `pop_ska` float NOT NULL, `pop_jazz` float NOT NULL, `ska_jazz` float NOT NULL )
 
 
+insert into 
+reporte (idc,rock_reg,rock_pop,rock_ska,rock_jazz,reg_pop,reg_ska,reg_jazz,pop_ska,pop_jazz,ska_jazz) 
+select DISTINCT(idc),avg(rock_reg),AVG(rock_pop),avg(rock_ska),AVG(rock_jazz),AVG(reg_pop),AVG(reg_ska),avg(reg_jazz),AVG(pop_ska),AVG(pop_jazz),AVG(ska_jazz) 
+from categoria where idc=1
 
+update 
+reporte set 
+reporte.rock_reg=(SELECT i.rock_reg from (select avg(rock_reg) rock_reg from categoria where idc=1) i), 
+reporte.rock_pop=(SELECT i.rock_pop from (select avg(rock_pop) rock_pop from categoria where idc=1) i),
+reporte.rock_ska=(SELECT i.rock_ska from (select avg(rock_ska) rock_ska from categoria where idc=1) i),
+reporte.rock_jazz=(SELECT i.rock_jazz from (select avg(rock_jazz) rock_jazz from categoria where idc=1) i),
+reporte.reg_pop=(SELECT i.reg_pop from (select avg(reg_pop) reg_pop from categoria where idc=1) i),
+reporte.reg_ska=(SELECT i.reg_ska from (select avg(reg_ska) reg_ska from categoria where idc=1) i),
+reporte.reg_jazz=(SELECT i.reg_jazz from (select avg(reg_jazz) reg_jazz from categoria where idc=1) i),
+reporte.pop_ska=(SELECT i.pop_ska from (select avg(pop_ska) pop_ska from categoria where idc=1) i),
+reporte.pop_jazz=(SELECT i.pop_jazz from (select avg(pop_jazz) pop_jazz from categoria where idc=1) i),
+reporte.ska_jazz=(SELECT i.ska_jazz from (select avg(ska_jazz) ska_jazz from categoria where idc=1) i)
+where reporte.idc=1

@@ -1,6 +1,6 @@
 app.service('AuthenticationService', ["$http", "$state", function($http, $state){
 	var self = this;
-	self.checkToken = function(token){
+	self.checkToken = function(token,username){
 		var data = {token: token};
 		
 		$http.post("endpoints/checkToken.php", data).success(function(response){

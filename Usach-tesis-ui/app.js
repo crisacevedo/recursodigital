@@ -70,6 +70,17 @@ app.config(function($stateProvider, $urlRouterProvider){
 		templateUrl: "views/unificado.html",
 		params: {'test': null}
 		})
+
+		.state("administrador", {
+		url:"/administrador",
+		controller: "AdministradorController",
+		templateUrl: "views/administrador.html",
+		params: {'test': null}
+		})
 		
+
+
+
+
 })
 

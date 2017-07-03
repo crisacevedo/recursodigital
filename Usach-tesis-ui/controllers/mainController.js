@@ -3,12 +3,15 @@ app.controller("MainController", function ($scope, $state, $http, Authentication
 
 
 	var token;
+	var username;
 	if (localStorage['token']){
     token = JSON.parse(localStorage['token']);
+	username = JSON.parse(localStorage['username']);	
+	console.log(username);
 	} else {
 	token = "something stupid";
 	}
-	AuthenticationService.checkToken(token);
+	AuthenticationService.checkToken(token,username);
 
 
 
