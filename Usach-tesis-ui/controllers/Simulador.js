@@ -276,7 +276,7 @@ for (var i = 0; i<5; i ++) {
 
     $http.post('endpoints/simulador.php', data).success(function(response){
       console.log(response)
-      $state.go("simulador");
+      $state.reload("simulador");
     }).error(function(error){
       console.error(error);
 
