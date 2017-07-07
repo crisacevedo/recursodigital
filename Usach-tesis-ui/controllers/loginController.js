@@ -41,12 +41,33 @@ app.controller("LoginController", function($scope, $http, $state,AuthenticationS
         }
         
         $http.post("endpoints/login.php", data).success(function(response){
+           
+           
             console.log(response);
             localStorage.setItem("token", JSON.stringify(response));
             localStorage.setItem("username", JSON.stringify($scope.loginInfo.username));
-          
+             var username = JSON.parse(localStorage.getItem('username'));
+             var token = JSON.parse(localStorage.getItem('token'));
+            console.log(username);  
             
+            if(username=="administrador")
+{
+
+            $state.go("administrador");
+}
+
+
+
+            if(username!="administrador")
+{
+
             $state.go("application");
+}
+
+
+
+
+
         }).error(function(error){
             console.error(error);
         });

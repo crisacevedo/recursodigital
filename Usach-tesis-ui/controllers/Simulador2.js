@@ -4,6 +4,16 @@ app.controller("Simulador2Controller", function($scope, $http, $state,Authentica
     
 var username = JSON.parse(localStorage.getItem('username'));
 
+
+
+if(username=="administrador")
+
+{
+
+   $state.go("login");
+}
+
+
 $scope.rockcero=0;
 $scope.rock=0;
      
