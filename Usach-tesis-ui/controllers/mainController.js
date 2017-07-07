@@ -28,8 +28,11 @@ if(username=="administrador")
 	token = "something stupid";
 	}
 	AuthenticationService.checkToken(token,username);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/master
 
 
 

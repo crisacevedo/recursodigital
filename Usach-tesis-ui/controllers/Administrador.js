@@ -2,6 +2,7 @@ app.controller("AdministradorController", function ($scope, $state, $http, Authe
     //If user is not logged in
 
 
+<<<<<<< HEAD
 
     
 var username = JSON.parse(localStorage.getItem('username'));
@@ -15,6 +16,11 @@ if(username!="administrador")
 }
 
 
+=======
+    
+var username = JSON.parse(localStorage.getItem('username'));
+
+>>>>>>> origin/master
 google.charts.load('current', {'packages':['corechart']});
 //google.charts.setOnLoadCallback(drawChart);
 //google.charts.setOnLoadCallback(drawMaterial);
