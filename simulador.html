@@ -1,0 +1,364 @@
+  
+<div class="wrapper">
+	<div class="sidebar" data-background-color="white" data-active-color="danger">
+
+    <!--
+		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+	-->
+
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="#/app" class="simple-text">
+                    Nombre Sitio
+                </a>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="#/app">
+                        <i class="ti-home"></i>
+                        <p>Inicio</p>
+                    </a>
+                </li>
+				<li>
+                    <a class="accordion">
+                        <i class="ti-align-left"></i>
+                        <p>Tutoriales <b class="caret"></b></p>
+                    </a>
+					<div class="panel">
+						<ul class="nav">
+							<a class="accordion">
+								<p>Lógica y Conjuntos Difusos <b class="caret"></b></p>
+							</a>
+							<div class="panel">
+								<ul class="nav">
+									<li><a href="#/logica">Lógica Difusa</a></li>
+									<li><a href="#/conjuntos">Conjuntos Difusos</a></li>
+									<li><a href="#">Contenido 3</a></li>
+								</ul>
+							</div>
+							<a class="accordion">
+								<p>Modelos Relacionales Difusos <b class="caret"></b></p>
+							</a>
+							<div class="panel">
+								<ul class="nav">
+									<li><a href="#/modelos">Introducción</a></li>
+									<li><a href="#/unificado">Modelo Unificado</a></li>
+									<li><a href="#">Contenido 3</a></li>
+								</ul>
+							</div>
+							<a class="accordion">
+								<p>Modelo Fuzzy EER <b class="caret"></b></p>
+							</a>
+							<div class="panel">
+								<ul class="nav">
+									<li><a href="#/eer">Introducción</a></li>
+									<li><a href="#">Contenido 2</a></li>
+									<li><a href="#">Contenido 3</a></li>
+								</ul>
+							</div>
+						</ul>
+					</div>
+                </li>
+				<li class="active">
+                    <a class="accordion">
+						<i class="ti-vector"></i>
+						<p>Simuladores <b class="caret"></b></p>
+					</a>
+					<div class="panel">
+						<ul class="nav">
+							<li class="active"><a href="#/simulador">Modelo Unificado</a></li>
+							<li><a href="#/simulador2">Modelo Fuzzy EER</a></li>
+						</ul>
+					</div>
+				</li>
+            </ul>
+    	</div>
+    </div>
+	
+    <div class="main-panel">
+		<nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Navegación</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="ti-settings"></i>
+									<p>Herramientas</p>
+									<b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Administración</a></li>
+                                <li><a href="#">Reportes</a></li>
+                              </ul>
+                        </li>
+						<li>
+                            <a ng-click="logout()" href="#">
+                                <i class="ti-panel"></i>
+								<p>Salir</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+		<div style="margin-left:2%; text-align: justify; width:600px;">
+			<center> <h2>Simulador Relaciones de Similitud</h2> </center>
+			<center> <h3>Ejemplo en que se basa el Simulador.</h3> </center>
+			<br>
+			Cuando Codd propuso su modelo de base de datos relacional [Codd; 1970],múltiples teorías intentaron definir un marco para la representación y tratamiento de información borrosa en las bases de datos, las cuales  incorporaron,la utilización del valor nulo para representar la existencia de imperfección en un atributo y extendieron el cálculo relacional sobre una lógica basada en tres valores: verdadero, falso y quizás [Cuevas; 2009]. Otras propuestas utilizaron la teoría de las probabilidades, donde el valor de un atributo se asocia a una distribución de probabilidad [Motro; 1997]. 
+			<br>
+			<br>
+			Si bien son variadas las propuestas en las que se ha intentado definir una estructura de datos y un álgebra relacional difusa particulares, los diferentes enfoques se agrupan principalmente en torno a dos tendencias: los modelos de unificación mediante relaciones de similitud y los modelos relacionales sobre distribuciones de posibilidad [Medina; 1994] [Cuevas; 2009]. Todo lo anterior llevó a definir los modelos físicos y lógicos para el desarrollo de bases de datos difusas y fue Urrutia [Urrutia;2003,]la que detalló el diseño conceptual de entidades y relaciones difusas, mediante su modelo llamado Fuzzy EER.
+			<br>
+			<br>
+			Sin importar cuál sea el enfoque seleccionado, lo cierto es que el comprender la teoría, funcionamiento y la lógica que ocupan estos modelos, requieren de conocimientos adicionales de teoría de conjuntos y lógica difusa, lo que los hace difíciles de entender y con ello se dificulta el detectar su real usabilidad [Galindo et al.; 2006].Por lo que se plantea el siguiente ejemplo,para ayudar a explicar de manera más sencilla este tema,que aplica el modelamiento conceptual Fuzzy EER de la profesora Urrutia al shuffle play[Carman;1995], el cual es un modo de reproducción de medios que ordena al azar las pistas y considera en su reproducción, la no repetición de ellas.  Para el ejemplo,solo nos enfocaremos en el apartado del ordenamiento,utilizando elementos de las bases de datos difusas para definir un orden basado no en el azar sino en elementos imprecisos y subjetivos como son los gustos personales del usuario (ya sea por el estilo ó categoría de música que prefiera y el ánimo que le despierte un respectivo tema).
+			<br>
+			<br>
+			Utilizando el modelamiento tradicional de Codd y su modelo Relacional [Codd;1970], destacamos, en la siguiente figura,una sección de un supuesto modelo que alberga la base de datos de un reproductor de música, la cual describe  dos Entidades, Álbum y Canción.Se destaca la entidad Álbum, para contextualizar la entidad Canción.
+			<br>
+			<br>
+			<img src="assets\img\ERsmall.png" >
+			<br>
+			Lo que describe la figura es la relación entre álbumes y canciones, donde una canción puede pertenecer a 1 o M álbumes, como asimismo los álbumes a 1 o N canciones. Otro propósito para adjuntar la figura que describe la sección de este supuesto modelo, es que la teoría de Codd, no posee la cualidad de representar, elementos de carácter borroso, como serían los gustos personales, por lo que  utilizando la teoría de Fuzzy EER, agregaremos elementos adicionales a la entidad canción para lograr la finalidad del ejemplo.
+			<br>
+			<br>
+			A grandes rasgos, la teoría de Fuzzy EER, extiende el modelo Entidad Relación, utilizando elementos del mismo y agregando unos nuevos, los cuales son los grados y atributos difusos, los cuales pueden ser de diferentes tipos. 
+			<br><br>
+			La entidad Canción ,preservará los atributos  canción_Id (clave primaria) y Título, agregando  tres elementos nuevos :
+			<li> Un atributo difuso de tipo 3, de nombre Categoría. </li>
+			<li> Un grado difuso asociado a Categoría, no derivado. </li>
+			<li> Un grado difuso con su propio significado. </li>
+			<br><br>
+			ATRIBUTO TIPO 3, DE NOMBRE CATEGORÍA
+			<br><br>
+			Si se piensa en un atributo Categoría tradicional, ésta tendría valores como Rock, Pop, etc.. pero no sería posible establecer una categoría que representará las similitudes que existen entre categorías como el ska o el reggae, o categorías de canciones que sean parcialmente rock, con atisbos de pop, por lo que el atributo difuso de tipo 3 establece unas relaciones, denominadas de similitud, sobre etiquetas lingüísticas(rock,pop,reggae,ska,jazz),las cuales permiten definir mediante valores, estimados arbitrariamente por el usuario, semejanzas entre etiquetas lingüísticas, en nuestro caso, estilos musicales diferentes.
+			<br><br>
+			<br>
+			<img src="assets\img\MODELOUNIFICADO.png" align="middle" >
+			<br><br>
+			<br><br>
+			La tabla representa las relaciones de similitud que se establecen entre las etiquetas, mediante valores arbitrarios asignados por el usuario.La tabla se llena pensando en que valor, entre 0 y 1, asigna cada cada usuario, a la similitud entre elementos. La idea de esto es poder reflejar lo distinto que percibe un individuo de otro, hechos tan subjetivos como el descrito.
+			<br><br>
+			A continuación un simulador de este mismo ejemplo. Al presionar el botón evaluar,luego de llenar todos los campos, se informa los resultados por pantalla.
+			<br><br>
+			<br>
+			<img src="assets\img\tablavalores.png" align="middle" >
+			<img src="assets\img\tablavalores.png" align="middle" >
+			<br><br>
+			De acuerdo a esta tabla, es como se asignan los valores.
+			<br><br>
+			<table style="width:40px">
+				<tr>
+					<th>s</th>
+					<th>RO</th>
+					<th>RE</th> 
+					<th>PO</th>
+					<th>SK</th> 
+					<th>JA</th>
+				</tr>
+				<tr>
+					<tr>
+					<td> RO </td>
+					<td> <input  type="text"   placeholder="1" id="text" name="text_name"  style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem1=1"/> </td>
+					<td> <input  class="copyMe" type="text1"  onkeyup="AllowNumeric(this)" style="width: 50px; color:blue" maxlength="4"ng-model= "ObtEvaInfo.ObtEva1elem2"/> </td>
+					<td> <input class="copyMedos"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem3"/> </td>
+					<td> <input class="copyMetres"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem4"/> </td>
+					<td> <input class="copyMecuatro"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem5"/> </td>
+					<tr>
+					<td> RE </td>
+					<td> <input  class="copyMe" type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem2"/> </td>
+					<td> <input  type="text" placeholder="1" id="text" name="text_name" style="width: 40px; color:blue"; ng-model= "ObtEvaInfo.ObtEva2elem2=1"/> </td>
+					<td> <input class="copyMecinco" type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem3"/> </td>
+					<td> <input class="copyMeseis"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem4"/> </td>
+					<td> <input class="copyMesiete"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem5"/> </td>
+					<tr>
+					<td> PO </td>
+					<td> <input  class="copyMedos"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem3"/> </td>
+					<td> <input class="copyMecinco"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model "ObtEvaInfo.ObtEva2elem3"/> </td>
+					<td> <input type="text" placeholder="1" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva3elem3=1"/> </td>
+					<td> <input class="copyMeocho"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva3elem4"/> </td>
+					<td> <input  class="copyMenueve"  type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva3elem5"/> </td>
+					<tr>
+					<td> SK </td>
+					<td> <input class="copyMetres"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem4"/> </td>
+					<td> <input class="copyMeseis"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem4"/> </td>
+					<td> <input class="copyMeocho"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva3elem4"/> </td>
+					<td> <input  type="text" placeholder="1" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva4elem4=1"/> </td>
+					<td> <input class="copyMediez" type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva4elem5"/> </td>
+					<tr>
+					<td> JA </td>
+					<td> <input  class="copyMecuatro"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem5"/> </td>
+					<td> <input class="copyMesiete"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem5"/> </td>
+					<td> <input class="copyMenueve"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva3elem5"/> </td>
+					<td> <input class="copyMediez"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva4elem5"/> </td>
+					<td> <input  type="text" placeholder="1" id="text" name="text_name" style="width: 40px; color:blue"; ng-model= "ObtEvaInfo.ObtEva5elem5=1" /> </td>
+				</tr>
+			</table>
+
+					<td> ANIMO <input  type="text" placeholder="1" id="text" name="text_name" style="width: 40px; color:blue"; ng-model= "ObtEvaInfo.ObtEva5elem6" /> </td>
+			
+
+			<center>
+				<audio id="player" controls="controls">
+					<source id="sourceOgg" src="" type="audio/ogg" />
+					<source id="sourceMp3" src="" type="audio/mp3" />
+					Your browser does not support the audio element.
+				</audio>
+				<p>
+					<button ng-click="loadsong(1)"> Track 1 </button>
+				</p>
+				<p>
+					<button ng-click="loadsong(2)"> Track 2 </button>
+				</p>
+			</center>
+			<button type="submit" class="width-35  btn btn-sm btn-primary" ng-click="ObtEva()">  <i class="ace-icon fa fa-key"> </i> Evaluar </button>
+		</div>
+    </div>
+</div>
+
+<script>
+	// Append all the named children to the form and then submit it
+	// Assumes the class of any input used by the form is the same as the form id
+	function submitMyForm( form_id )
+	{
+		var form = document.getElementById( form_id );
+		var form_elements = document.getElementsByClassName( form_id );
+		var i;
+		for (i = 0; i < form_elements.length; i++) {
+			form.appendChild( form_elements[i] );                   
+		}
+		form.submit();
+	}
+</script>
+
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].onclick = function(){
+		this.classList.toggle("active");
+		this.nextElementSibling.classList.toggle("show");
+		}
+	}
+</script>
+
+<script>
+
+	$(document).ready(function(){
+		$(".copyMe").keyup(function(){
+			$(".copyMe").val($(this).val());
+		});
+	});
+
+
+	$(document).ready(function(){
+		$(".copyMeuno").keyup(function(){
+			$(".copyMeuno").val($(this).val());
+		});
+	});
+
+	$(document).ready(function(){
+		$(".copyMeunodos").keyup(function(){
+			$(".copyMeunodos").val($(this).val());
+		});
+	});
+
+	$(document).ready(function(){
+		$(".copyMedos").keyup(function(){
+			$(".copyMedos").val($(this).val());
+		});
+	});
+
+	$(document).ready(function(){
+		$(".copyMetres").keyup(function(){
+			$(".copyMetres").val($(this).val());
+		});
+	});
+
+	$(document).ready(function(){
+		$(".copyMecuatro").keyup(function(){
+			$(".copyMecuatro").val($(this).val());
+		});
+	});
+
+	$(document).ready(function(){
+		$(".copyMecinco").keyup(function(){
+			$(".copyMecinco").val($(this).val());
+		});
+	});
+
+	$(document).ready(function(){
+		$(".copyMeseis").keyup(function(){
+			$(".copyMeseis").val($(this).val());
+		});
+	});
+
+	$(document).ready(function(){
+		$(".copyMesiete").keyup(function(){
+			$(".copyMesiete").val($(this).val());
+		});
+	});
+
+	$(document).ready(function(){
+		$(".copyMeocho").keyup(function(){
+			$(".copyMeocho").val($(this).val());
+		});
+	});
+
+	$(document).ready(function(){
+		$(".copyMenueve").keyup(function(){
+			$(".copyMenueve").val($(this).val());
+		});
+	});
+
+	$(document).ready(function(){
+		$(".copyMediez").keyup(function(){
+			$(".copyMediez").val($(this).val());
+		});
+	});
+
+
+function AllowNumeric(txt)
+  {
+  		
+
+  		var patt=new RegExp(/([A-Z a-z \s \,\-\/\ \[ \] \<\> \^ \` \~ \+ \'\:\_\|\°\¬\!\"\#\$\%\&\(\)=\?\¡\¿\*\¨\´\{\}])([.]{2})[A-Z a-z \s \,\-\/\ \[ \] \<\> \^ \` \~ \+ \'\:\_\|\°\¬\!\"\#\$\%\&\(\)=\?\¡\¿\*\¨\´\{\}]*/g);
+  		var numeros=new RegExp(/\d/g);
+
+  		if (patt.test(txt.value)==1)
+      		{
+      		txt.value = txt.value.replace(patt,'');
+      		}
+  
+        var numero =txt.value;
+        	console.log(txt.value);
+        	if(numero>1)
+  	        				
+         {
+
+         	txt.value = txt.value.replace(numeros,'');
+      		
+         }
+
+  }
+
+
+
+
+
+</script>
+
+
+
+
