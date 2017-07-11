@@ -167,45 +167,70 @@
 					<th>JA</th>
 				</tr>
 				<tr>
+
 					<tr>
 					<td> RO </td>
-					<td> <input  type="text"   placeholder="1" id="text" name="text_name"  style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem1=1"/> </td>
-					<td> <input  class="copyMe" type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem2"/> </td>
-					<td> <input class="copyMedos"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem3"/> </td>
-					<td> <input class="copyMetres"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem4"/> </td>
-					<td> <input class="copyMecuatro"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem5"/> </td>
+					<td> <input  type="text"   placeholder="1" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem1=1"/> </td>
+					<td> <input  class="copyMe" type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4" style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem2"/> </td>
+					<td> <input class="copyMedos"type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem3"/> </td>
+					<td> <input class="copyMetres"type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem4"/> </td>
+					<td> <input class="copyMecuatro"type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem5"/> </td>
 					<tr>
 					<td> RE </td>
-					<td> <input  class="copyMe" type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem2"/> </td>
-					<td> <input  type="text" placeholder="1" id="text" name="text_name" style="width: 40px; color:blue"; ng-model= "ObtEvaInfo.ObtEva2elem2=1"/> </td>
-					<td> <input class="copyMecinco" type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem3"/> </td>
-					<td> <input class="copyMeseis"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem4"/> </td>
-					<td> <input class="copyMesiete"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem5"/> </td>
+					<td> <input  class="copyMe" type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem2"/> </td>
+					<td> <input  type="text" placeholder="1" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue"; ng-model= "ObtEvaInfo.ObtEva2elem2=1"/> </td>
+					<td> <input class="copyMecinco" type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem3"/> </td>
+					<td> <input class="copyMeseis"type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem4"/> </td>
+					<td> <input class="copyMesiete"type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem5"/> </td>
 					<tr>
 					<td> PO </td>
-					<td> <input  class="copyMedos"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem3"/> </td>
-					<td> <input class="copyMecinco"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model "ObtEvaInfo.ObtEva2elem3"/> </td>
-					<td> <input type="text" placeholder="1" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva3elem3=1"/> </td>
-					<td> <input class="copyMeocho"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva3elem4"/> </td>
-					<td> <input  class="copyMenueve"  type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva3elem5"/> </td>
+					<td> <input  class="copyMedos"type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem3"/> </td>
+					<td> <input class="copyMecinco" type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem3"/> </td>
+					<td> <input type="text" placeholder="1" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva3elem3=1"/> </td>
+					<td> <input class="copyMeocho"type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva3elem4"/> </td>
+					<td> <input  class="copyMenueve"  type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva3elem5"/> </td>
 					<tr>
 					<td> SK </td>
-					<td> <input class="copyMetres"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem4"/> </td>
-					<td> <input class="copyMeseis"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem4"/> </td>
-					<td> <input class="copyMeocho"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva3elem4"/> </td>
-					<td> <input  type="text" placeholder="1" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva4elem4=1"/> </td>
-					<td> <input class="copyMediez" type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva4elem5"/> </td>
+					<td> <input class="copyMetres"type="text" id="text" name="text_name"  onkeyup="AllowNumeric(this)" maxlength="4"
+style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem4"/> </td>
+					<td> <input class="copyMeseis"type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem4"/> </td>
+					<td> <input class="copyMeocho"type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva3elem4"/> </td>
+					<td> <input  type="text" placeholder="1" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva4elem4=1"/> </td>
+					<td> <input class="copyMediez" type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva4elem5"/> </td>
 					<tr>
 					<td> JA </td>
-					<td> <input  class="copyMecuatro"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem5"/> </td>
-					<td> <input class="copyMesiete"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem5"/> </td>
-					<td> <input class="copyMenueve"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva3elem5"/> </td>
-					<td> <input class="copyMediez"type="text" id="text" name="text_name" style="width: 40px; color:blue" ng-model= "ObtEvaInfo.ObtEva4elem5"/> </td>
-					<td> <input  type="text" placeholder="1" id="text" name="text_name" style="width: 40px; color:blue"; ng-model= "ObtEvaInfo.ObtEva5elem5=1" /> </td>
+					<td> <input  class="copyMecuatro"type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva1elem5"/> </td>
+					<td> <input class="copyMesiete"type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva2elem5"/> </td>
+					<td> <input class="copyMenueve"type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva3elem5"/> </td>
+					<td> <input class="copyMediez"type="text" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue" ng-model= "ObtEvaInfo.ObtEva4elem5"/> </td>
+					<td> <input  type="text" placeholder="1" id="text" name="text_name" onkeyup="AllowNumeric(this)" maxlength="4"
+ style="width: 50px; color:blue"; ng-model= "ObtEvaInfo.ObtEva5elem5=1" /> </td>
+
+
 				</tr>
 			</table>
 
-					<td> ANIMO <input  type="text" placeholder="1" id="text" name="text_name" style="width: 40px; color:blue"; ng-model= "ObtEvaInfo.ObtEva5elem6" /> </td>
+					<td> ANIMO <input  type="text" placeholder="1" id="text" name="text_name"  
+						onkeyup="AllowNumeric(this)" maxlength="4" style="width: 50px; color:blue"  ng-model= "ObtEvaInfo.ObtEva5elem6" /> </td>
 			
 
 			<center>
@@ -327,6 +352,41 @@
 			$(".copyMediez").val($(this).val());
 		});
 	});
+
+
+function AllowNumeric(txt)
+  {
+  		
+
+  		var patt=new RegExp(/([A-Z a-z \s \,\-\/\ \[ \] \<\> \^ \` \~ \+ \'\:\_\|\°\¬\!\"\#\$\%\&\(\)=\?\¡\¿\*\¨\´\{\}])*(\.{2})*/g);
+  		
+  			var patt1=new RegExp(/([A-Z a-z \s \,\-\/\ \[ \] \<\> \^ \` \~ \+ \'\:\_\|\°\¬\!\"\#\$\%\&\(\)=\?\¡\¿\*\¨\´\{\}])*(\.([A-Z a-z 0-9 \s \,\-\/\ \[ \] \<\> \^ \` \~ \+ \'\:\_\|\°\¬\!\"\#\$\%\&\(\)=\?\¡\¿\*\¨\´\{\}])*\.)/g);
+  		
+
+  		var numeros=new RegExp(/\d/g);
+
+  		if (patt.test(txt.value)==1 || patt1.test(txt.value)==1 )
+      		{
+      		console.log("hola");
+      		txt.value = txt.value.replace(patt,'');
+      		txt.value = txt.value.replace(patt1,'');
+      		}
+  
+        var numero =txt.value;
+        	//console.log(txt.value);
+        	if(numero>1)
+  	        				
+         {
+
+         	txt.value = txt.value.replace(numeros,'');
+      		
+         }
+
+  }
+
+
+
+
 
 </script>
 
